@@ -31,6 +31,5 @@
     "node_modules",
     ".nuxt",
     "dist"
-  ],
-  "extends": "@pre-history/quasarbasenuxt/tsconfig.json",
+  ]
 }
