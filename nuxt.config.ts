@@ -1,7 +1,6 @@
 import { nuxtConfig } from "nuxt-extend";
 
 export default nuxtConfig({
-  extends: "@pre-history/quasarbasenuxt/nuxt.config",
   name: "coils-front",
   srcDir: __dirname,
   head: {
@@ -60,7 +59,6 @@ export default nuxtConfig({
   },
 
   components: [
-    { path: "~node_modules/@pre-history/quasarbasenuxt/components", level: 0 },
     { path: "~/components", level: 1 },
   ],
 
