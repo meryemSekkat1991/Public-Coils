@@ -8,3 +8,11 @@
   MobileMenu
   Footer
 </template>
+<script lang="ts">
+  import { Component, Vue } from "nuxt-property-decorator";
+
+  @Component({
+    name: "Default",
+  })
+  export default class Default extends Vue {}
+</script>

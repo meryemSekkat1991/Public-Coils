@@ -5,23 +5,37 @@ div(class="navbar mb-2 shadow-lg bg-gradient-to-b from-indigo-500 via-indigo-300
       svg.inline-block.w-6.h-6.stroke-current(xmlns='http://www.w3.org/2000/svg' fill='none' viewbox='0 0 24 24')
         path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 6h16M4 12h16M4 18h16')
   .flex-1.px-2.mx-2(class='lg:flex')
-    span.text-lg.font-bold
-      | Coils
-  .flex-none
-    .avatar.mr-2
-      .rounded-full.w-10.h-10.m-1
-        img(src='https://i.pravatar.cc/500?img=32')
-    button.btn.bg-indigo-300.text-white.font-bold.border-indigo-100(@click="logout" class="hover:bg-indigo-400 hover:border-indigo-100") logout
+    span.text-lg.font-bold.flex
+      img.ml-1.w-12.h-6(src="https://i.ibb.co/m6QgTtM/logo-coils.png")
+      span.ml-2.uppercase {{$t('coils.coils')}}
+  LanguageSwitcher
+  .user.relative(v-if="isAuth")
+    .collapse.relative(tabindex='0')
+      .collapse-title.text-xs.font-medium
+        .cover(class="flex bg-indigo-400 rounded-full w-8 h-8  items-center justify-center hover:bg-transparent")
+          Placeholder(:data="user.lastname")
+      .collapse-content.fixed.top-20
+        .label.text-sm {{user.lastname}}
+    .tooltip(data-tip='logout' class="tooltip-bottom tooltip-info")
+      a.btn.btn-ghost(@click="logout") [->
 </template>
 
 <script lang="ts">
 import { Vue, Component, Prop } from "nuxt-property-decorator";
 
-@Component({})
+@Component({
+})
 export default class Navbar extends Vue {
   @Prop({ default: 'drawer' }) id!: string;
 
-  logout() {
+  get user(): Record<string, unknown> | null {
+    return this.$auth.user;
+  }
+
+  get isAuth(): boolean {
+    return  this.$auth.loggedIn;
+  }
+  logout(): void {
     this.$auth.logout()
       .then(() => {
         this.$router.push("/")
@@ -29,3 +43,13 @@ export default class Navbar extends Vue {
   }
 }
 </script>
+<style lang="scss">
+.collapse {
+  .collapse-title {
+    @apply p-0 w-12 h-12 flex items-center justify-center;
+  }
+  .collapse-content {
+    @apply pb-0;
+  }
+}
+</style>

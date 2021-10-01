@@ -1,20 +1,83 @@
 [
   {
-    "name": "login",
+    "name": "index___fr",
+    "path": "/fr",
+    "component": "/home/meryem/public-coils/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_3802277e"
+  },
+  {
+    "name": "index___it",
+    "path": "/it",
+    "component": "/home/meryem/public-coils/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_3802277e"
+  },
+  {
+    "name": "login___en",
     "path": "/login",
     "component": "/home/meryem/public-coils/pages/login.vue",
     "chunkName": "pages/login",
     "_name": "_a4b2e150"
   },
   {
-    "name": "warehouse",
+    "name": "Products___en",
+    "path": "/Products",
+    "component": "/home/meryem/public-coils/pages/Products.vue",
+    "chunkName": "pages/Products",
+    "_name": "_552dd8e5"
+  },
+  {
+    "name": "warehouse___en",
     "path": "/warehouse",
     "component": "/home/meryem/public-coils/pages/warehouse.vue",
     "chunkName": "pages/warehouse",
     "_name": "_658fda32"
   },
   {
-    "name": "index",
+    "name": "login___fr",
+    "path": "/fr/login",
+    "component": "/home/meryem/public-coils/pages/login.vue",
+    "chunkName": "pages/login",
+    "_name": "_a4b2e150"
+  },
+  {
+    "name": "Products___fr",
+    "path": "/fr/Products",
+    "component": "/home/meryem/public-coils/pages/Products.vue",
+    "chunkName": "pages/Products",
+    "_name": "_552dd8e5"
+  },
+  {
+    "name": "warehouse___fr",
+    "path": "/fr/warehouse",
+    "component": "/home/meryem/public-coils/pages/warehouse.vue",
+    "chunkName": "pages/warehouse",
+    "_name": "_658fda32"
+  },
+  {
+    "name": "login___it",
+    "path": "/it/login",
+    "component": "/home/meryem/public-coils/pages/login.vue",
+    "chunkName": "pages/login",
+    "_name": "_a4b2e150"
+  },
+  {
+    "name": "Products___it",
+    "path": "/it/Products",
+    "component": "/home/meryem/public-coils/pages/Products.vue",
+    "chunkName": "pages/Products",
+    "_name": "_552dd8e5"
+  },
+  {
+    "name": "warehouse___it",
+    "path": "/it/warehouse",
+    "component": "/home/meryem/public-coils/pages/warehouse.vue",
+    "chunkName": "pages/warehouse",
+    "_name": "_658fda32"
+  },
+  {
+    "name": "index___en",
     "path": "/",
     "component": "/home/meryem/public-coils/pages/index.vue",
     "chunkName": "pages/index",

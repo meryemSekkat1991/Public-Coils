@@ -23,7 +23,7 @@
 </template>
 
 <script lang="ts">
-import {Component, mixins} from "nuxt-property-decorator";
+  import {Component, mixins } from "nuxt-property-decorator";
 import { ValidationObserver, ValidationProvider } from 'vee-validate'
 
 @Component({

@@ -14,8 +14,12 @@ import { createStore } from './store.js'
 /* Plugins */
 
 import nuxt_plugin_plugin_c47644b2 from 'nuxt_plugin_plugin_c47644b2' // Source: ./components/plugin.js (mode: 'all')
+import nuxt_plugin_pluginutils_c9c0b6c4 from 'nuxt_plugin_pluginutils_c9c0b6c4' // Source: ./nuxt-i18n/plugin.utils.js (mode: 'all')
+import nuxt_plugin_pluginrouting_07c98269 from 'nuxt_plugin_pluginrouting_07c98269' // Source: ./nuxt-i18n/plugin.routing.js (mode: 'all')
+import nuxt_plugin_pluginmain_e010acb4 from 'nuxt_plugin_pluginmain_e010acb4' // Source: ./nuxt-i18n/plugin.main.js (mode: 'all')
 import nuxt_plugin_axios_437de986 from 'nuxt_plugin_axios_437de986' // Source: ./axios.js (mode: 'all')
 import nuxt_plugin_veevalidate_6e5ad03a from 'nuxt_plugin_veevalidate_6e5ad03a' // Source: ../plugins/vee-validate (mode: 'client')
+import nuxt_plugin_i18n_1fba523a from 'nuxt_plugin_i18n_1fba523a' // Source: ../plugins/i18n.js (mode: 'all')
 import nuxt_plugin_auth_0ae5c253 from 'nuxt_plugin_auth_0ae5c253' // Source: ./auth.js (mode: 'all')
 
 // Component: <ClientOnly>
@@ -217,12 +221,28 @@ async function createApp(ssrContext, config = {}) {
     await nuxt_plugin_plugin_c47644b2(app.context, inject)
   }
 
+  if (typeof nuxt_plugin_pluginutils_c9c0b6c4 === 'function') {
+    await nuxt_plugin_pluginutils_c9c0b6c4(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_pluginrouting_07c98269 === 'function') {
+    await nuxt_plugin_pluginrouting_07c98269(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_pluginmain_e010acb4 === 'function') {
+    await nuxt_plugin_pluginmain_e010acb4(app.context, inject)
+  }
+
   if (typeof nuxt_plugin_axios_437de986 === 'function') {
     await nuxt_plugin_axios_437de986(app.context, inject)
   }
 
   if (process.client && typeof nuxt_plugin_veevalidate_6e5ad03a === 'function') {
     await nuxt_plugin_veevalidate_6e5ad03a(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_i18n_1fba523a === 'function') {
+    await nuxt_plugin_i18n_1fba523a(app.context, inject)
   }
 
   if (typeof nuxt_plugin_auth_0ae5c253 === 'function') {

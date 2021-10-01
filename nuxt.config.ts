@@ -48,11 +48,14 @@ export default nuxtConfig({
     baseURL: 'http://173.212.223.175:3000',
   },
 
-  buildModules: ['@nuxt/typescript-build'],
+  css: ["assets/css.postcss"],
+
+  buildModules: ['@nuxt/typescript-build', "@nuxt/postcss8","@nuxtjs/tailwindcss"],
 
   modules: [
     "@nuxtjs/axios",
     "@nuxtjs/auth-next",
+    "nuxt-i18n",
   ],
 
   router: {
@@ -66,6 +69,7 @@ export default nuxtConfig({
 
   plugins: [
     { src: '~/plugins/vee-validate', mode: 'client' },
+    { src: '~/plugins/i18n.js' }
   ],
   tailwindcss: {
     config: {
@@ -80,8 +84,37 @@ export default nuxtConfig({
         rtl: false
       }
     }
-  }
+  },
 
+  i18n: {
+    locales: [
+      {
+        name: 'English',
+        code: "en",
+        iso: 'en-US',
+        file: "en/index.ts",
+      },
+      {
+        name: "french",
+        code: "fr",
+        iso: 'fra',
+        file: "fr/index.ts",
+      },
+      {
+        name: 'Italiano',
+        code: 'it',
+        iso: 'it-IT',
+        file: 'it/index.ts'
+      },
+    ],
+    strategy: "prefix_except_default",
+    langDir: "locales",
+    lazy: true,
+    defaultLocale: "en",
+    vueI18nLoader: true,
+  },
+
+  styleExtensions: ["css", "pcss", "postcss", "scss"],
 });
 
 console.log();

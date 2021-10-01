@@ -1,6 +1,9 @@
+export { default as Breadcrumb } from '../../components/Breadcrumb.vue'
 export { default as Footer } from '../../components/Footer.vue'
+export { default as LanguageSwitcher } from '../../components/LanguageSwitcher.vue'
 export { default as MobileMenu } from '../../components/MobileMenu.vue'
 export { default as Navbar } from '../../components/Navbar.vue'
+export { default as Placeholder } from '../../components/Placeholder.vue'
 export { default as WarehousesCard } from '../../components/WarehousesCard.vue'
 
 // nuxt/nuxt.js#8607
