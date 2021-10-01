@@ -1,0 +1,14 @@
+{
+  "Footer": {
+    "description": "Auto imported from components/Footer.vue"
+  },
+  "MobileMenu": {
+    "description": "Auto imported from components/MobileMenu.vue"
+  },
+  "Navbar": {
+    "description": "Auto imported from components/Navbar.vue"
+  },
+  "WarehousesCard": {
+    "description": "Auto imported from components/WarehousesCard.vue"
+  }
+}
