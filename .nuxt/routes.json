@@ -1,0 +1,23 @@
+[
+  {
+    "name": "login",
+    "path": "/login",
+    "component": "/home/meryem/public-coils/pages/login.vue",
+    "chunkName": "pages/login",
+    "_name": "_a4b2e150"
+  },
+  {
+    "name": "warehouse",
+    "path": "/warehouse",
+    "component": "/home/meryem/public-coils/pages/warehouse.vue",
+    "chunkName": "pages/warehouse",
+    "_name": "_658fda32"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/home/meryem/public-coils/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_3802277e"
+  }
+]

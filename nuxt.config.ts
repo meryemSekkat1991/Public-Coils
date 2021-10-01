@@ -48,6 +48,8 @@ export default nuxtConfig({
     baseURL: 'http://173.212.223.175:3000',
   },
 
+  buildModules: ['@nuxt/typescript-build'],
+
   modules: [
     "@nuxtjs/axios",
     "@nuxtjs/auth-next",
@@ -65,6 +67,20 @@ export default nuxtConfig({
   plugins: [
     { src: '~/plugins/vee-validate', mode: 'client' },
   ],
+  tailwindcss: {
+    config: {
+      mode: "jit",
+      darkMode: "media",
+      plugins: [
+        // eslint-disable-next-line global-require
+        require("daisyui")
+      ],
+      daisyui: {
+        themes: false,
+        rtl: false
+      }
+    }
+  }
 
 });
 
