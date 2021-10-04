@@ -1,12 +1,21 @@
 {
+  "Breadcrumb": {
+    "description": "Auto imported from components/Breadcrumb.vue"
+  },
   "Footer": {
     "description": "Auto imported from components/Footer.vue"
+  },
+  "LanguageSwitcher": {
+    "description": "Auto imported from components/LanguageSwitcher.vue"
   },
   "MobileMenu": {
     "description": "Auto imported from components/MobileMenu.vue"
   },
   "Navbar": {
     "description": "Auto imported from components/Navbar.vue"
+  },
+  "Placeholder": {
+    "description": "Auto imported from components/Placeholder.vue"
   },
   "WarehousesCard": {
     "description": "Auto imported from components/WarehousesCard.vue"

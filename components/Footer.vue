@@ -1,6 +1,6 @@
 <template lang="pug">
-footer.p-4.footer.text-base-content.footer-center(class="bg-gradient-to-b from-indigo-500 via-indigo-300 to-indigo-200")
-  div
+footer.p-4.footer.footer-center(class="bg-gradient-to-b from-indigo-500 via-indigo-300 to-indigo-200")
+  div.text-white.
     p Copyright &copy; 2021 - All right reserved by ACME Industries Ltd
 </template>
 

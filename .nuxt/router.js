@@ -4,9 +4,10 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _a4b2e150 = () => interopDefault(import('../pages/login.vue' /* webpackChunkName: "pages/login" */))
-const _658fda32 = () => interopDefault(import('../pages/warehouse.vue' /* webpackChunkName: "pages/warehouse" */))
 const _3802277e = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
+const _a4b2e150 = () => interopDefault(import('../pages/login.vue' /* webpackChunkName: "pages/login" */))
+const _552dd8e5 = () => interopDefault(import('../pages/Products.vue' /* webpackChunkName: "pages/Products" */))
+const _658fda32 = () => interopDefault(import('../pages/warehouse.vue' /* webpackChunkName: "pages/warehouse" */))
 
 const emptyFn = () => {}
 
@@ -20,17 +21,53 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
+    path: "/fr",
+    component: _3802277e,
+    name: "index___fr"
+  }, {
+    path: "/it",
+    component: _3802277e,
+    name: "index___it"
+  }, {
     path: "/login",
     component: _a4b2e150,
-    name: "login"
+    name: "login___en"
+  }, {
+    path: "/Products",
+    component: _552dd8e5,
+    name: "Products___en"
   }, {
     path: "/warehouse",
     component: _658fda32,
-    name: "warehouse"
+    name: "warehouse___en"
+  }, {
+    path: "/fr/login",
+    component: _a4b2e150,
+    name: "login___fr"
+  }, {
+    path: "/fr/Products",
+    component: _552dd8e5,
+    name: "Products___fr"
+  }, {
+    path: "/fr/warehouse",
+    component: _658fda32,
+    name: "warehouse___fr"
+  }, {
+    path: "/it/login",
+    component: _a4b2e150,
+    name: "login___it"
+  }, {
+    path: "/it/Products",
+    component: _552dd8e5,
+    name: "Products___it"
+  }, {
+    path: "/it/warehouse",
+    component: _658fda32,
+    name: "warehouse___it"
   }, {
     path: "/",
     component: _3802277e,
-    name: "index"
+    name: "index___en"
   }],
 
   fallback: false

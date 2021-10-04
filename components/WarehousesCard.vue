@@ -1,10 +1,13 @@
 <template lang="pug">
-card
+.card
   .card-body.shadow-md.w-full.border.mb-5.rounded-lg.bg-white
     .flex.flex-grow.items-center
+      .flex-none
+        .cover.h-12.w-12.rounded-full.flex.justify-center.items-center.text-white.font-bold(class="bg-gradient-to-tr from-indigo-200 via-indigo-300 to-indigo-200 ")
+          Placeholder(:data="warehouse.name")
       .flex-1.pr-5
         input.input.w-full(v-model="warehouse.name")
-      .flex-2
+      .flex-none
         .card-action.place-self-end
           button.btn.btn-primary.mr-2(@click="save(warehouse.id)") Save
           button.btn.bg-red-600.text-white.border-red-100(class="hover:bg-red-700 hover:border-red-100" @click="deleteWarehouse(warehouse.id)") Delete
@@ -39,13 +42,7 @@ export default class warehousesCard extends Vue {
           cancelToken: source.token
         }
       )
-      .catch((err) => {
-        if (this.$axios.isCancel(err)) {
-          console.log('request canceled')
-        }
-      })
     setTimeout(function () {
-      source.cancel()
     }, 500)
   }
 }
