@@ -1,10 +1,20 @@
 <template lang="pug">
   .products
-    .form-control
-      label.label
-        span.label-text.font-bold Search By name
-      .flex.space-x-2.mb-4
-        input.w-full.input.input-primary.input-bordered(type='text' placeholder='Search' v-model="params.q" @input="createQuery")
+    .flex
+      .form-control.flex-1.mr-2
+        label.label
+          span.label-text.font-bold Search By name
+        .flex.space-x-2.mb-4
+          input.w-full.input.input-primary.input-bordered(type='text' placeholder='Search' v-model="params.q" @input="createQuery")
+      .form-control
+        label.label
+          span.label-text.font-bold Search By State
+        select.select.select-bordered.w-full.max-w-xs.w-96(v-model="state" @input="createQuery")
+          option(disabled='disabled' selected='selected') All
+          option draft
+          option validated
+          option archived
+
     table.table.table-hover.w-full
       thead
         tr
@@ -61,6 +71,7 @@
   export default class Products extends Vue {
     products = [];
     currentPage = 1;
+    state = "";
     params = {
       q: "",
       page: 1,
@@ -72,7 +83,7 @@
       next_page: 2,
       prev_page: 1,
       total_count: 100,
-      per_page: 9
+      per_page: 18
     }
 
 
@@ -80,6 +91,7 @@
       const query = {
         page: this.currentPage > 1 ? this.currentPage.toString() : undefined,
         q: this.params.q || undefined,
+        state: this.state,
       };
 
       this.$router.push({
@@ -93,8 +105,9 @@
         .get('/api/admin/slitters?', {
           params: {
             search: this.params.q,
-            page_size: 100,
-            page: this.currentPage
+            page_size: 50,
+            page: this.currentPage,
+            state: this.state
           }
         })
         .then(res => (
